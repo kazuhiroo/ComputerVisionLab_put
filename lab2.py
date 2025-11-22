@@ -15,14 +15,14 @@ def fun1():
    # cv2.imshow("window", image2)
    # cv2.waitKey(0)
 
-   cv2.namedWindow('twoja stara')
-   cv2.createTrackbar('chuj', 'twoja stara', 0, 255, th)
-   cv2.createTrackbar('cwel', 'twoja stara', 0, 2, th)
+   cv2.namedWindow('window')
+   cv2.createTrackbar('aaaa', 'window', 0, 255, th)
+   cv2.createTrackbar('bbbb', 'window', 0, 2, th)
 
    key = ord('a')
    while key != ord('q'):
-      val = cv2.getTrackbarPos('chuj', 'twoja stara')
-      choice  = cv2.getTrackbarPos('cwel', 'twoja stara')
+      val = cv2.getTrackbarPos('aaaa', 'window')
+      choice  = cv2.getTrackbarPos('bbbb', 'window')
 
       if choice == 0:
          ret, image2 = cv2.threshold(image, val, 255, cv2.THRESH_BINARY)
@@ -31,7 +31,7 @@ def fun1():
       elif choice == 2:
          ret, image2 = cv2.threshold(image, val, 255, cv2.THRESH_TOZERO)
       
-      cv2.imshow('twoja stara', image2)
+      cv2.imshow('window', image2)
 
       key = cv2.waitKey(10)
 
@@ -110,4 +110,4 @@ def fun5(path):
    cv2.waitKey(0)
 
 if __name__ == "__main__":
-   fun5("obraz0.jpg")
+   fun1()
