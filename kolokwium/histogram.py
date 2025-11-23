@@ -21,6 +21,6 @@ for i, col in enumerate(colours):
     plt.plot(hist, color = colours[i])
     plt.xlim([0,256])
 plt.show()
-print("added to test the internet")
+
 cv2.imshow('window', img_g)
 cv2.waitKey(0)
