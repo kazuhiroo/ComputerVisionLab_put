@@ -110,4 +110,4 @@ def fun5(path):
    cv2.waitKey(0)
 
 if __name__ == "__main__":
-   fun1()
+   fun5("putcv.png")
