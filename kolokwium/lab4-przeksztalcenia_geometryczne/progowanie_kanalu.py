@@ -20,7 +20,7 @@ x1, y1 = points[0]
 x2, y2 = points[1]
 
 roi = img[x1:x2, y1:y2, 1]
-_, thresh = cv2.threshold(roi, 200, 255, cv2.THRESH_BINARY)
+_, thresh = cv2.threshold(roi, 255, 255, cv2.THRESH_BINARY)
 
 output = img.copy()
 output[x1:x2, y1:y2, 1] = thresh
